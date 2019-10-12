@@ -1,0 +1,58 @@
+package com.sample.rules
+import test.Score;
+rule "ScoreA"
+    when 
+        Score(score > 90)
+        
+    then
+        System.out.println("A");
+end
+rule "ScoreB+"
+    when 
+        Score(score >=87&&score<=89)
+        
+    then
+        System.out.println("B+");
+end
+rule "ScoreB"
+    when 
+        Score(score >=80&&score<=86)
+        
+    then
+        System.out.println("B");
+end
+rule "ScoreC+"
+    when 
+        Score(score >=77&&score<=79)
+        
+    then
+        System.out.println("C+");
+end
+rule "ScoreC"
+    when 
+        Score(score >=70&&score<=76)
+        
+    then
+        System.out.println("C");
+end
+rule "ScoreD+"
+    when 
+        Score(score >=67&&score<=69)
+        
+    then
+        System.out.println("D+");
+end
+rule "ScoreD"
+    when 
+        Score(score >=60&&score<=66)
+        
+    then
+        System.out.println("D");
+end
+rule "ScoreF"
+    when 
+        Score(score < 60)
+        
+    then
+        System.out.println("F");
+end
